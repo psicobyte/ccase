@@ -64,4 +64,21 @@ ayuda = "Change case of a string.\n\
 
 main = do
     args <- getArgs
-    putStrLn $ haycadena args
+
+    entrada <- getContents
+
+    putStrLn $ haycadena $ args ++ entrada:[]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
