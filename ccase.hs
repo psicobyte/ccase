@@ -50,6 +50,7 @@ procesa (x:xs)
 
 capitaliza :: Char -> Char -> Char
 capitaliza ' ' x = toUpper x
+capitaliza '\n' x = toUpper x
 capitaliza _ x = toLower x
 
 
