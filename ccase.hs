@@ -85,32 +85,3 @@ main = do
 
 
 
-
-
-
-
-{-
-    if length args == 0
-        then
-        do
-            entrada <- getContents
-            putStrLn $ procesa $ "-u":entrada:[]
-    else
-        if length args == 1
-        then
-            putStrLn "aaa"
-        else
-            putStrLn $ show args
-
-
--}
-
-
-
-
-
-
-
-
-
-
