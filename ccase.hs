@@ -64,15 +64,46 @@ ayuda = "Change case of a string.\n\
 
 
 main = do
+
     args <- getArgs
 
-    entrada <- getContents
+    if length args > 1
+    then do
+        putStrLn $ procesa args
 
-    putStrLn $ haycadena $ args ++ entrada:[]
+    else if length args > 0
+        then do
+            if empiezaguion $ head args
+            then do
+                entrada <- getContents
+                putStrLn $ procesa $ (head args):entrada:[]
+            else
+                putStrLn $ procesa $ "-u":args
+        else do
+            entrada <- getContents
+            putStrLn $ procesa $ "-u":entrada:[]
 
 
 
 
+
+
+
+{-
+    if length args == 0
+        then
+        do
+            entrada <- getContents
+            putStrLn $ procesa $ "-u":entrada:[]
+    else
+        if length args == 1
+        then
+            putStrLn "aaa"
+        else
+            putStrLn $ show args
+
+
+-}
 
 
 
