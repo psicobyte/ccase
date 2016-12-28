@@ -43,7 +43,7 @@ procesa :: [String] -> String
 procesa (x:xs)
     | x == "-u" = map toUpper $ intercalate " " (xs)
     | x == "-l" = map toLower $ intercalate " " (xs)
-    | x == "-c" = scanl (capitaliza) ' ' $ intercalate " " (xs)
+    | x == "-c" = tail $ scanl (capitaliza) ' ' $ intercalate " " (xs)
     | x == "-h" = ayuda
     | otherwise = "Invalid option \"" ++ x ++ "\". Try -u, -l, -c or -h"
 
